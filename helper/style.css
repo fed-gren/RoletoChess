@@ -1,0 +1,15 @@
+body {
+  position: relative;
+}
+
+.modal__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal__container--button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
