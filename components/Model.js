@@ -16,5 +16,7 @@ export default {
       title: "archer",
       id: 3
     }
-  ]
+  ],
+
+  firstClass: null
 }

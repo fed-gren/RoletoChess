@@ -15,6 +15,7 @@ export default class StartView {
     this.container = container;
 
     this.render();
+    this.classSelectView.attachEvent();
   }
 
   render() {

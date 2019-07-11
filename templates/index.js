@@ -13,7 +13,7 @@ export default {
         ${data.reduce((html, item) => {
           return `
           ${html}
-          <li class="class-card">
+          <li class="class-card ${item.title}" data-class=${item.title}>
             ${item.title}
           </li>
           `;
