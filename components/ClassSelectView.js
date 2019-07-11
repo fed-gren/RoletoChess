@@ -1,8 +1,11 @@
 import Model from "./Model.js";
 import templates from "../templates/index.js";
+import MyEventEmitter from "../utils/MyEventEmitter/index.js";
 
-export default class ClassSelectView {
+export default class ClassSelectView extends MyEventEmitter {
   constructor() {
+    super();
+
     this.render();
   }
 
@@ -16,8 +19,10 @@ export default class ClassSelectView {
     this.classSelect.addEventListener("click", ({ target }) => {
       if(Model.firstClass) return;
 
-      if (target.classList.contains("class-card"))
+      if (target.classList.contains("class-card")) {
         Model.firstClass = target.dataset.class;
+        this.emit("start");
+      }
     });
   }
 }

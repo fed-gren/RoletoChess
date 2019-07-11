@@ -7,7 +7,7 @@ export default class MapView {
   }
 
   render() {
-    this.template = templates.mapView();
+    this.template = templates.mapView(Model);
     this.container.innerHTML = this.template;
   }
 }

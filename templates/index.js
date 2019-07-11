@@ -3,7 +3,7 @@ export default {
     return `
       <h1 class="main-title">${title}</h1>
       <div class="class-select"></div>
-      <p class="message-select">시작 카드를 선택하면 게임이 시작됩니다.</p>
+      <p class="message-select">함께 할 첫 카드를 골라주세요!</p>
     `;
   },
 
@@ -23,7 +23,10 @@ export default {
   },
 
   //TODO: map markup design
-  mapView() {
-    return `<p>Map template</p>`
+  mapView({firstClass}) {
+    return `
+      <p>Map template</p>
+      <p>Select : ${firstClass}</p>
+    `
   }
 };
