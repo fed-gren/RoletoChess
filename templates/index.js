@@ -20,5 +20,10 @@ export default {
         }, ``)}
       </ul>
     `;
+  },
+
+  //TODO: map markup design
+  mapView() {
+    return `<p>Map template</p>`
   }
 };
