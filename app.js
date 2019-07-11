@@ -7,4 +7,6 @@ import StartView from "./components/StartView.js";
 
 const container = document.querySelector(".roletoChess-container");
 
-new StartView(container);
+window.addEventListener("DOMContentLoaded", () => {
+  new StartView(container);
+});
