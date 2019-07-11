@@ -3,19 +3,28 @@
   height: 6rem;
   border-radius: 0.2rem;
   border: 3px solid;
+  cursor: pointer;
+  transition: 100ms transform ease-out;
+}
+
+.class-card:hover {
+  transform: scale(1.3);
 }
 
 .class-card.worrior {
-  border-color: #000;
-  background-color: #fff;
+  /* bloodshot */
+  border-color: #600707;
+  background-color: #F44336;
 }
 
-.class-ard.witch {
-  border-color: #000;
-  background-color: #fff;
+.class-card.witch {
+  /* ring */
+  border-color: #135699;
+  background-color: #1976D2;
 }
 
 .class-card.archer {
-  border-color: #000;
-  background-color: #fff;
+  /* callow */
+  border-color: #1B5E20;
+  background-color: #66BB6A;
 }
