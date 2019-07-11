@@ -1,0 +1,17 @@
+.class-select {
+  margin: 200px 0;
+}
+
+.class-select > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.class-select li {
+  margin: 0 1rem;
+}
+
+.message-select {
+  text-align: center;
+}

@@ -1,5 +1,6 @@
 import ClassSelectView from "./ClassSelectView.js";
 import templates from "../templates/index.js";
+import Model from "./Model.js";
 
 /**
  * description: 첫 화면 UI
@@ -19,6 +20,10 @@ export default class StartView {
   render() {
     //데이터 받아와서 템플릿 완성 시키고 mainContents DOM에 넣고
     //화면 보여주기.
-    this.container.innerHTML = this.classSelectView.template;
+    this.template = templates.startView(Model);
+    this.container.innerHTML = this.template;
+
+    this.classSelect = this.container.querySelector(".class-select");
+    this.classSelect.innerHTML = this.classSelectView.template;
   }
 }

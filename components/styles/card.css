@@ -1,0 +1,21 @@
+.class-card {
+  width: 4rem;
+  height: 6rem;
+  border-radius: 0.2rem;
+  border: 3px solid;
+}
+
+.class-card.worrior {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.class-ard.witch {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.class-card.archer {
+  border-color: #000;
+  background-color: #fff;
+}

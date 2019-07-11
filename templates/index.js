@@ -1,8 +1,9 @@
 export default {
-  startView(data) {
+  startView({title}) {
     return `
-      <h1>${data.title}</h1>
-      <div class="select-class"></div>
+      <h1 class="main-title">${title}</h1>
+      <div class="class-select"></div>
+      <p class="message-select">시작 카드를 선택하면 게임이 시작됩니다.</p>
     `;
   },
 
