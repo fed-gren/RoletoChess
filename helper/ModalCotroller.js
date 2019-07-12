@@ -1,8 +1,6 @@
-import ModalView from './ModalView.js';
-
 class ModalController {
-  constructor() {
-    this.modalView = new ModalView();
+  constructor(modalView) {
+    this.modalView = modalView;
     this.container = document.querySelector('.modal__container');
   }
   
@@ -17,5 +15,4 @@ class ModalController {
   }
 }
 
-const modalController = new ModalController();
-modalController.init();
+export default ModalController;
