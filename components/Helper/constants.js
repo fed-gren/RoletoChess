@@ -6,5 +6,5 @@ export default {
     "helpContentsClass" : "modal__popup--help"
   },
   "buttonName": "?",
-  "help": ["this", "will", "be", "replaced", "with", "variables", "including", "helps"]
+  "help": ["this", "will", "be", "replaced", "with", "variables", "including", "helps"],
 }

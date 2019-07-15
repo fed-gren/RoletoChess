@@ -4,7 +4,7 @@ export default {
   startCards: [
     {
       id: 1,
-      title: "worrior",
+      title: "worrior"
     },
 
     {
@@ -18,5 +18,18 @@ export default {
     }
   ],
 
+  buttonName: "?",
+
+  help: [
+    "this",
+    "will",
+    "be",
+    "replaced",
+    "with",
+    "variables",
+    "including",
+    "helps"
+  ],
+
   firstClass: null
-}
+};

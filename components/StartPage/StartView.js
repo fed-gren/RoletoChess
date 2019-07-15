@@ -1,8 +1,8 @@
-import SelectView from "./SelectView.js";
-import CardView from "./CardView.js";
+import SelectView from "../Card/SelectView.js";
+import CardView from "../Card/CardView.js";
 
-import templates from "../templates/index.js";
-import Model from "./Model.js";
+import templates from "../../templates/index.js";
+import Model from "../Model.js";
 
 /**
  * description: 첫 화면 UI

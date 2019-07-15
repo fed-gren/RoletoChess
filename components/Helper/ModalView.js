@@ -1,10 +1,9 @@
-import template from './template/Template.js';
-
-
+import template from '../../templates/index.js';
 
 class ModalView {
   constructor({className, help, buttonName}) {
     this.container = document.querySelector('.modal');
+    this.gameMain = document.querySelector('.contents');
     this.btnClass = className.btnClass;
     this.modalClass = className.modalClass;
     this.helpContainerClass = className.helpContainerClass;
@@ -14,7 +13,7 @@ class ModalView {
     this.helpBtn = null;
     this.modalPopup = null;
     this.helpContainer = null;
-    console.log(help);
+
     this.init();
   }
   // TODO: Data 받아와서 뿌리기
@@ -28,9 +27,9 @@ class ModalView {
     this.rendering(template.createButton, this.container, this.btnClass, this.buttonName);
     this.helpBtn = this.selectDom(this.btnClass);
 
-    this.rendering(template.createModal, this.container, this.modalClass);
+    this.rendering(template.createModal, this.gameMain, this.modalClass);
     this.modalPopup = this.selectDom(this.modalClass);
-    
+
     this.rendering(template.createHelpContainer, this.modalPopup, this.helpContainerClass);
     this.helpContainer = this.selectDom(this.helpContainerClass);
 
@@ -43,7 +42,7 @@ class ModalView {
   }
 
   selectDom(className) {
-    return this.container.getElementsByClassName(className)[0];
+    return document.getElementsByClassName(className)[0];
   }
 
   addClass(dom, className) {

@@ -1,15 +1,11 @@
 import ModalView from './ModalView.js';
 import ModalController from './ModalCotroller.js';
-import config from './config/config.js';
+import config from './constants.js';
 
-class Helper {
+export default class Helper {
   init() {
     const modalView = new ModalView(config);
     const modalController = new ModalController(modalView)
     modalController.init();
   }
 }
-
-const helper = new Helper();
-helper.init();
-

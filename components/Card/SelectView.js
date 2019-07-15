@@ -1,6 +1,6 @@
-import Model from "./Model.js";
-import templates from "../templates/index.js";
-import MyEventEmitter from "../utils/MyEventEmitter/index.js";
+import Model from "../Model.js";
+import templates from "../../templates/index.js";
+import MyEventEmitter from "../../utils/MyEventEmitter/index.js";
 
 export default class SelectView extends MyEventEmitter {
   constructor({ CardViewList } = {}) {
