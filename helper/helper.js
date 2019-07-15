@@ -1,6 +1,6 @@
 import ModalView from './ModalView.js';
 import ModalController from './ModalCotroller.js';
-import config from './config.js';
+import config from './config/config.js';
 
 class Helper {
   init() {
