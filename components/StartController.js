@@ -3,13 +3,13 @@
 export default class StartController {
   constructor({ startView, mapView }) {
     this.startView = startView;
-    this.classSelectView = this.startView.classSelectView;
+    this.selectView = this.startView.selectView;
     this.mapView = mapView;
 
     this.container = document.querySelector(".roletoChess-container");
     this.container.style.transition = `200ms opacity`;
 
-    this.classSelectView.on("start", () => {
+    this.selectView.on("start", () => {
       this.mapViewRender();
     });
   }

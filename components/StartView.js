@@ -1,4 +1,6 @@
-import ClassSelectView from "./ClassSelectView.js";
+import SelectView from "./SelectView.js";
+import CardView from "./CardView.js";
+
 import templates from "../templates/index.js";
 import Model from "./Model.js";
 
@@ -9,13 +11,18 @@ import Model from "./Model.js";
 
 export default class StartView {
   constructor(container) {
-    this.classSelectView = new ClassSelectView();
+
+    this.cardViewList = Model.startCards.map(cardData => {
+      return new CardView({cardData});
+    });
+
+    this.selectView = new SelectView({CardViewList: this.cardViewList});
 
     //DOM cacheing
     this.container = container;
 
     this.render();
-    this.classSelectView.attachEvent();
+    this.selectView.attachEvent();
   }
 
   render() {
@@ -25,6 +32,6 @@ export default class StartView {
     this.container.innerHTML = this.template;
 
     this.classSelect = this.container.querySelector(".class-select");
-    this.classSelect.innerHTML = this.classSelectView.template;
+    this.classSelect.innerHTML = this.selectView.template;
   }
 }

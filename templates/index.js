@@ -7,7 +7,7 @@ export default {
     `;
   },
 
-  startClassSelectView(data) {
+  cardSelectView(data) {
     return `
       <ul>
         ${data.reduce((html, item) => {

@@ -1,10 +1,10 @@
 export default {
   title: "Roleto Chess",
 
-  classes: [
+  startCards: [
     {
+      id: 1,
       title: "worrior",
-      id: 1
     },
 
     {
