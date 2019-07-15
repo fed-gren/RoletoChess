@@ -1,7 +1,6 @@
 class ModalController {
   constructor(modalView) {
     this.modalView = modalView;
-    this.container = document.querySelector('.modal__container');
   }
   
   init() {
@@ -9,8 +8,9 @@ class ModalController {
   }
 
   clickHandler() {
-    this.container.addEventListener('click', (e) => {
-      this.modalView.togglePopup();
+    this.modalView.container.addEventListener('click', (e) => {
+      const modalPopup = e.target.closest('.modal__popup');
+      if(!modalPopup) this.modalView.togglePopup();
     });
   }
 }
