@@ -11,13 +11,13 @@ export default {
     return `
       <ul>
         ${data.reduce((html, item) => {
-          return `
+    return `
           ${html}
           <li class="class-card ${item.title}" data-class=${item.title}>
             ${item.title}
           </li>
           `;
-        }, ``)}
+  }, "")}
       </ul>
     `;
   },
@@ -27,33 +27,33 @@ export default {
     return `
       <p>Map template</p>
       <p>Select : ${firstClass}</p>
-    `
+    `;
   },
 
   createButton(className, data) {
     return `
       <button class="${className}">${data}</button>
-    `
+    `;
   },
 
   createModal(className) {
     return `
       <div class="${className}"></div>
-    `
+    `;
   },
 
   createHelpContainer(className) {
     return `
       <ul class="${className}"></ul>
-    `
+    `;
   },
 
   createHelpList(className, datas) {
     return datas.reduce((acc, data) => {
-      return acc +
-      `
+      return acc
+      + `
         <li class="${className}">${data}</li>
-      `
-    }, '')
+      `;
+    }, "");
   }
 };

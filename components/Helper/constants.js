@@ -7,4 +7,4 @@ export default {
   },
   "buttonName": "?",
   "help": ["this", "will", "be", "replaced", "with", "variables", "including", "helps"],
-}
+};

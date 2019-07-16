@@ -5,4 +5,4 @@ export default {
   BOOLEAN: "boolean",
   STRING: "string",
   UNDEFINED: "undefined"
-}
+};

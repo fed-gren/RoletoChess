@@ -7,7 +7,7 @@ export default class StartController {
     this.mapView = mapView;
 
     this.container = document.querySelector(".roletoChess-container");
-    this.container.style.transition = `200ms opacity`;
+    this.container.style.transition = "200ms opacity";
 
     this.selectView.on("start", () => {
       this.mapViewRender();

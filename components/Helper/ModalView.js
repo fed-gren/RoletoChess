@@ -1,14 +1,14 @@
-import template from '../../templates/index.js';
+import template from "../../templates/index.js";
 
 class ModalView {
   constructor({className, help, buttonName}) {
-    this.container = document.querySelector('.modal');
-    this.gameMain = document.querySelector('.contents');
+    this.container = document.querySelector(".modal");
+    this.gameMain = document.querySelector(".contents");
     this.btnClass = className.btnClass;
     this.modalClass = className.modalClass;
     this.helpContainerClass = className.helpContainerClass;
     this.helpContentsClass = className.helpContentsClass;
-    this.buttonName = buttonName
+    this.buttonName = buttonName;
     this.help = help;
     this.helpBtn = null;
     this.modalPopup = null;
@@ -38,7 +38,7 @@ class ModalView {
 
   rendering(templateCreator, parentElem, className, data) {
     const newTemplate = templateCreator(className, data);
-    parentElem.insertAdjacentHTML('beforeend', newTemplate);
+    parentElem.insertAdjacentHTML("beforeend", newTemplate);
   }
 
   selectDom(className) {
@@ -50,7 +50,7 @@ class ModalView {
   }
 
   togglePopup() {
-    this.modalPopup.classList.toggle('show');
+    this.modalPopup.classList.toggle("show");
   }
 }
 

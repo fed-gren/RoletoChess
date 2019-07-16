@@ -1,3 +1,3 @@
 export default {
-  LISTENER_TYPE: `Listener must be function.`
-}
+  LISTENER_TYPE: "Listener must be function."
+};

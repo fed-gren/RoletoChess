@@ -1,0 +1,21 @@
+{
+  "parserOptions": {  //자바스크립트 버전, 모듈 사용 여부
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended", //확장 설정. airbnb의 스타일을 따름.
+  "env": {  //프로젝트 사용, 실행, 테스트 등의 환경
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+    "rules": {
+      "quotes": ["error", "double"],
+      "indent": ["error", 2],
+      "operator-linebreak": ["error", "before"],
+      "semi": ["error", "always"]
+  },
+  "plugins": ["import"],
+  "globals": {  //전역 변수 설정. ESLint는 기본적으로 전역변수의 사용을 에러로 처리하기 때문에 만약 jQuery같은 외부 라이브러리를 사용한다면 여기에 전역변수를 넣어 에러 표시를 방지
+  }
+}
