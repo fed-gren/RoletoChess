@@ -1,5 +1,5 @@
 import StartView from "./components/StartPage/StartView.js";
-import MapView from "./components/MapView.js";
+import PlayView from "./components/PlayView.js";
 import StartController from "./components/StartPage/StartController.js";
 import Helper from "./components/Helper/index.js";
 
@@ -12,8 +12,8 @@ const container = document.querySelector(".roletoChess-container");
 
 window.addEventListener("DOMContentLoaded", () => {
   const startView = new StartView(container);
-  const mapView = new MapView(container);
-  new StartController({ startView, mapView });
+  const playView = new PlayView(container);
+  new StartController({ startView, playView });
 
   const helper = new Helper();
   helper.init();
