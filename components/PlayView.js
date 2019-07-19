@@ -1,13 +1,10 @@
-import templates from "../templates/index.js";
-import Model from "./Model.js";
-
 export default class PlayView {
-  constructor(container) {
+  constructor({ container, battleBoardView }) {
     this.container = container;
+    this.battleBoardView = battleBoardView;
   }
 
   render() {
-    this.template = templates.playView(Model);
-    this.container.innerHTML = this.template;
+    this.battleBoardView.render({ container: this.container });
   }
 }

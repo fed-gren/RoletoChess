@@ -17,6 +17,7 @@ body {
   grid-gap: 10px;
 
   transform: rotate3d(1, 0, 0, 20deg);
+  transition: transform 0.7s ease-in;
 }
 
 .battle-board > .block {
@@ -38,6 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .enemy-card.left {
