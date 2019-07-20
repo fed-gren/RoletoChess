@@ -59,39 +59,27 @@ export default {
     }, "");
   },
 
-  battleBoardView() {
-    return `<div class="battle-board">
-    <div class="block">
-      <div class="enemy-card left">1</div>
-    </div>
-    <div class="block">
-      <div class="enemy-card left-center">2</div>
-    </div>
-    <div class="block">
-      <div class="enemy-card center">3</div>
-    </div>
-    <div class="block">
-      <div class="enemy-card center-right">4</div>
-    </div>
-    <div class="block">
-      <div class="enemy-card right">5</div>
-    </div>
+  battleFieldView({ playerFieldCards, enemyFieldCards }) {
+    const template = `
+    <div class="battle-board">
+    ${enemyFieldCards.reduce((html, card) => {
+      return `
+      ${html}
+      <div class="block">
+        <div class="enemy-card">${card.title}</div>
+      </div>
+      `;
+    }, ``)}
+    ${playerFieldCards.reduce((html, card) => {
+      return `
+      ${html}
+      <div class="block">
+        <div class="player-card">${card.title}</div>
+      </div>
+      `;
+    }, ``)}
+    </div>`;
 
-    <div class="block">
-      <div class="player-card left">1</div>
-    </div>
-    <div class="block">
-      <div class="player-card left-center">2</div>
-    </div>
-    <div class="block">
-      <div class="player-card center">3</div>
-    </div>
-    <div class="block">
-      <div class="player-card center-right">4</div>
-    </div>
-    <div class="block">
-      <div class="player-card right">5</div>
-    </div>
-  </div>`;
+    return template;
   }
 };

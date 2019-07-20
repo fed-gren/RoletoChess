@@ -31,5 +31,41 @@ export default {
     "helps"
   ],
 
-  firstClass: null
+  firstClass: null,
+
+  playerFieldCards: [
+    {
+      title: "worrior"
+    },
+    {
+      title: "worrior"
+    },
+    {
+      title: "witch"
+    },
+    {
+      title: "archer"
+    },
+    {
+      title: "witch"
+    }
+  ],
+
+  enemyFieldCards: [
+    {
+      title: "wolf"
+    },
+    {
+      title: "wolf"
+    },
+    {
+      title: "wolf"
+    },
+    {
+      title: "wolf"
+    },
+    {
+      title: "wolf"
+    }
+  ]
 };

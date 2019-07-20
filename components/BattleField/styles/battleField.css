@@ -1,0 +1,38 @@
+body {
+  perspective: 500px;
+}
+
+.battle-board {
+  width: 800px;
+  height: 400px;
+  border: 2px dotted black;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+
+  transform: rotate3d(1, 0, 0, 20deg);
+  transition: transform 1s ease-in-out;
+}
+
+.battle-board > .block {
+  background-color: rgb(182, 228, 228);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  perspective: 500px;
+}
+
+.block > .player-card,
+.enemy-card {
+  width: 80%;
+  height: 80%;
+  border: 1px solid slateblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
