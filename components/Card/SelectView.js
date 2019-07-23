@@ -3,15 +3,15 @@ import templates from "../../templates/index.js";
 import MyEventEmitter from "../../utils/MyEventEmitter/index.js";
 
 export default class SelectView extends MyEventEmitter {
-  constructor({ CardViewList } = {}) {
+  constructor({ cardList }) {
     super();
 
-    this.cardViewList = CardViewList.map(cardView => cardView.data);
+    this.cardList = cardList;
     this.render();
   }
 
   render() {
-    this.template = templates.cardSelectView(this.cardViewList);
+    this.template = templates.cardSelectView(this.cardList);
   }
 
   attachEvent() {

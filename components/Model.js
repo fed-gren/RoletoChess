@@ -33,23 +33,11 @@ export default {
 
   firstClass: null,
 
-  playerFieldCards: [
-    {
-      title: "worrior"
-    },
-    {
-      title: "worrior"
-    },
-    {
-      title: "witch"
-    },
-    {
-      title: "archer"
-    },
-    {
-      title: "witch"
-    }
-  ],
+  playerChoiceCard: {
+    title: "worrior"
+  },
+
+  playerFieldCards: [],
 
   enemyFieldCards: [
     {

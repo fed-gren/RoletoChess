@@ -66,18 +66,15 @@ export default {
       return `
       ${html}
       <div class="block">
-        <div class="enemy-card">${card.title}</div>
+        <div class="enemy-card ${card.title}">${card.title}</div>
       </div>
       `;
     }, ``)}
-    ${playerFieldCards.reduce((html, card) => {
-      return `
-      ${html}
-      <div class="block">
-        <div class="player-card">${card.title}</div>
-      </div>
-      `;
-    }, ``)}
+      <div class="block player-block" data-id="1"></div>
+      <div class="block player-block" data-id="2"></div>
+      <div class="block player-block" data-id="3"></div>
+      <div class="block player-block" data-id="4"></div>
+      <div class="block player-block" data-id="5"></div>
     </div>`;
 
     return template;
