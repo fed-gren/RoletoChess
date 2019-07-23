@@ -8,7 +8,9 @@ body {
   border: 2px dotted black;
 
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  /* grid-template-columns: auto auto auto auto auto; */
+  grid-template-columns: 152px 152px 152px 152px 152px; /*(800 - 40) / 5 = 760 / 5 = 152*/
+  grid-template-rows: 195px 195px;
   grid-gap: 10px;
 
   transform: rotate3d(1, 0, 0, 20deg);
@@ -34,5 +36,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+}
+
+.player-block {
   cursor: pointer;
 }

@@ -11,20 +11,26 @@
   transform: scale(1.3);
 }
 
-.class-card.worrior {
+.worrior {
   /* bloodshot */
   border-color: #600707;
-  background-color: #F44336;
+  background-color: #f44336;
 }
 
-.class-card.witch {
+.witch {
   /* ring */
   border-color: #135699;
-  background-color: #1976D2;
+  background-color: #1976d2;
 }
 
-.class-card.archer {
+.archer {
   /* callow */
-  border-color: #1B5E20;
-  background-color: #66BB6A;
+  border-color: #1b5e20;
+  background-color: #66bb6a;
+}
+
+.wolf {
+  /* Shelter */
+  border-color: #879596;
+  background-color: #d7dbdc;
 }
