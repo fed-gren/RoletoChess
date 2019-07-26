@@ -24,16 +24,16 @@ class ModalView {
   }
 
   initRender() {
-    this.rendering(template.createButton, this.container, this.btnClass, this.buttonName);
+    this.rendering(template.buttonUI, this.container, this.btnClass, this.buttonName);
     this.helpBtn = this.selectDom(this.btnClass);
 
-    this.rendering(template.createModal, this.gameMain, this.modalClass);
+    this.rendering(template.divContainer, this.gameMain, this.modalClass);
     this.modalPopup = this.selectDom(this.modalClass);
 
-    this.rendering(template.createHelpContainer, this.modalPopup, this.helpContainerClass);
+    this.rendering(template.ulContainer, this.modalPopup, this.helpContainerClass);
     this.helpContainer = this.selectDom(this.helpContainerClass);
 
-    this.rendering(template.createHelpList, this.helpContainer, this.helpContentsClass, this.help);
+    this.rendering(template.contentsList, this.helpContainer, this.helpContentsClass, this.help);
   }
 
   rendering(templateCreator, parentElem, className, data) {

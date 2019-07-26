@@ -1,5 +1,4 @@
 import SelectView from "../Card/SelectView.js";
-import CardView from "../Card/CardView.js";
 
 import templates from "../../templates/index.js";
 import Model from "../Model.js";
@@ -12,11 +11,8 @@ import Model from "../Model.js";
 export default class StartView {
   constructor(container) {
 
-    this.cardViewList = Model.startCards.map(cardData => {
-      return new CardView({cardData});
-    });
-
-    this.selectView = new SelectView({CardViewList: this.cardViewList});
+    // this.cardViewList = Model.startCards.map(cardData => new CardView({cardData}));
+    this.selectView = new SelectView(Model.startCards);
 
     //DOM cacheing
     this.container = container;

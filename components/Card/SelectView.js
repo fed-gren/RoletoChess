@@ -3,25 +3,26 @@ import templates from "../../templates/index.js";
 import MyEventEmitter from "../../utils/MyEventEmitter/index.js";
 
 export default class SelectView extends MyEventEmitter {
-  constructor({ CardViewList } = {}) {
+  constructor( cardList = [] ) {
     super();
-
-    this.cardViewList = CardViewList.map(cardView => cardView.data);
-    this.render();
+    this.cards = cardList;
+    this.render(this.cards);
   }
 
-  render() {
-    this.template = templates.cardSelectView(this.cardViewList);
+  render(cardList) {
+    this.template = templates.cardSelectView(cardList);
   }
 
   attachEvent() {
     this.cardSelect = document.querySelector(".class-select");
-
+    
     this.cardSelect.addEventListener("click", ({ target }) => {
-      if (Model.firstClass) return;
-
+      if (Model.onHand) return;
+      
       if (target.classList.contains("class-card")) {
-        Model.firstClass = target.dataset.class;
+        Model.onHand = Model.startCards.filter(obj => {
+          return obj.title === target.dataset.class;
+        });
         this.emit("start");
       }
     });

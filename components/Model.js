@@ -1,20 +1,83 @@
 export default {
   title: "Roleto Chess",
 
+  allCards:{
+    level1: [
+      {
+        id: 1,
+        title: "worrior",
+        class: 1,
+      },
+  
+      {
+        id: 2,
+        title: "witch",
+        class: 1,
+      },
+  
+      {
+        id: 3,
+        title: "archer",
+        class: 1,
+      }
+    ],
+    level2: [
+      {
+        id: 4,
+        title: "ghost worrior",
+        class: 2,
+      },
+  
+      {
+        id: 5,
+        title: "sorcerer",
+        class: 2,
+      },
+  
+      {
+        id: 6,
+        title: "elf",
+        class: 2,
+      }
+    ],
+    level3: [
+      {
+        id: 7,
+        title: "demon worrior",
+        class: 3,
+      },
+  
+      {
+        id: 8,
+        title: "wizard",
+        class: 3,
+      },
+  
+      {
+        id: 9,
+        title: "dark elf",
+        class: 3,
+      }
+    ],
+  },
+
   startCards: [
     {
       id: 1,
-      title: "worrior"
+      title: "worrior",
+      class: 1,
     },
 
     {
+      id: 2,
       title: "witch",
-      id: 2
+      class: 1,
     },
 
     {
+      id: 3,
       title: "archer",
-      id: 3
+      class: 1,
     }
   ],
 
@@ -31,5 +94,9 @@ export default {
     "helps"
   ],
 
-  firstClass: null
+  fistClass: null,
+
+  onHand: null,
+
+  market: []
 };
