@@ -1,27 +1,26 @@
-//카드 선택 되면, MapView 렌더링
+//카드 선택 되면, playView 렌더링
 
 export default class StartController {
-  constructor({ startView, mapView }) {
+  constructor({ startView, playView }) {
     this.startView = startView;
     this.selectView = this.startView.selectView;
-    this.mapView = mapView;
+    this.playView = playView;
 
     this.container = document.querySelector(".roletoChess-container");
     this.container.style.transition = "200ms opacity";
 
     this.selectView.on("start", () => {
-      this.mapViewRender();
+      this.playViewRender();
     });
   }
 
-  mapViewRender() {
+  playViewRender() {
     // TODO: magic number 없애기
     this.container.style.opacity = 0;
     this.sleep(200).then(() => {
-      this.mapView.render();
+      this.playView.render();
       this.container.style.opacity = 1;
     });
-
   }
 
   sleep(time) {
