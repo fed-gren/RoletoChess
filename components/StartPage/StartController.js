@@ -7,11 +7,7 @@ import DeckController from "../Card/InGame/CardDeck/DeckController.js";
 
 
 export default class StartController {
-<<<<<<< HEAD
   constructor({ startView, playView }) {
-=======
-  constructor({ startView, mapView, }) {
->>>>>>> 901ea278c2ed956ba34a681017b050ae41194695
     this.startView = startView;
     this.selectView = this.startView.selectView;
     this.playView = playView;
