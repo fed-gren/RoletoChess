@@ -26,29 +26,29 @@ export default {
   playView({ firstClass }) {
     return `
       <p>Map template</p>
-      <p>Select : ${firstClass}</p>
+      <p>Select : ${onHand[0].title}</p>
     `;
   },
 
-  createButton(className, data) {
+  buttonUI(className, data) {
     return `
       <button class="${className}">${data}</button>
     `;
   },
 
-  createModal(className) {
+  divContainer(className) {
     return `
       <div class="${className}"></div>
     `;
   },
 
-  createHelpContainer(className) {
+  ulContainer(className) {
     return `
       <ul class="${className}"></ul>
     `;
   },
 
-  createHelpList(className, datas) {
+  contentsList(className, datas) {
     return datas.reduce((acc, data) => {
       return (
         acc +

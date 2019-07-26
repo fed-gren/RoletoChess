@@ -10,7 +10,13 @@ import Model from "../Model.js";
 
 export default class StartView {
   constructor(container) {
+<<<<<<< HEAD
     this.selectView = new SelectView({ cardList: Model.startCards });
+=======
+
+    // this.cardViewList = Model.startCards.map(cardData => new CardView({cardData}));
+    this.selectView = new SelectView(Model.startCards);
+>>>>>>> 901ea278c2ed956ba34a681017b050ae41194695
 
     //DOM cacheing
     this.container = container;
