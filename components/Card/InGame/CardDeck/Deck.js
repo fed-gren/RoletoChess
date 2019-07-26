@@ -17,14 +17,15 @@ export default class Deck extends SelectView {
     this.deck = document.querySelector(`.${this.deckClassName}`);
     this.attach(className);
   }
-  
+
   attach(className) {
     if(!this.deck) {this.deck = document.querySelector(`.${className}`);}
     this.deck.innerHTML = this.template;
   }
-  
+
   renderCards(cardsList) {
     this.render(cardsList);
-    this.attach();
+    //   this.attach();
+    return this.template;
   }
 }

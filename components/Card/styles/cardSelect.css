@@ -17,19 +17,19 @@
 }
 
 .deck-onHand {
-  border: 3px solid #E08119;
-  margin: 23rem 0 2rem 0;
+  border: 3px solid #e08119;
   background-color: #f09a3e;
 }
 
 .deck-market {
   border: 3px solid #163d77;
-  margin: 2rem 0;
+  margin: 1rem 0;
   background-color: #3f6aaa;
 }
 
 .deck-onHand,
 .deck-market {
+  width: 80%;
   padding: 15px 0;
   border-radius: 20px;
 }
@@ -54,4 +54,3 @@
 .deck-market li:hover {
   transform: scale(1.2);
 }
-

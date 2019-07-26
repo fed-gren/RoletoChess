@@ -9,14 +9,14 @@ export default class BattleFieldView {
 
   attachEvent() {
     this.eventAttachFlag = true;
-    this.battleBoard = document.querySelector(".battle-board");
-    this.battleBoard.addEventListener(
+    const roletoChessContainer = document.querySelector(".roletoChess-container");
+    roletoChessContainer.addEventListener(
       "click",
       ({ target, target: { classList } }) => {
         if (
           !(
-            classList.contains("player-block") ||
-            classList.contains("player-card")
+            classList.contains("player-block")
+            || classList.contains("player-card")
           )
         )
           return;

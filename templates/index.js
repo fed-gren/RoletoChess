@@ -11,22 +11,14 @@ export default {
     return `
       <ul>
         ${data.reduce((html, item) => {
-          return `
+    return `
           ${html}
-          <li class="class-card ${item.title}" data-class=${item.title}>
+          <li class="class-card ${item.title}" data-class=${item.title} data-idx=${item.idx}>
             ${item.title}
           </li>
           `;
-        }, "")}
+  }, "")}
       </ul>
-    `;
-  },
-
-  //TODO: map markup design
-  playView({ firstClass }) {
-    return `
-      <p>Map template</p>
-      <p>Select : ${onHand[0].title}</p>
     `;
   },
 
@@ -51,8 +43,8 @@ export default {
   contentsList(className, datas) {
     return datas.reduce((acc, data) => {
       return (
-        acc +
-        `
+        acc
+        + `
         <li class="${className}">${data}</li>
       `
       );
@@ -63,7 +55,7 @@ export default {
     const template = `
     <div class="battle-board">
     ${enemyFieldCards.reduce((html, card) => {
-      return `
+    return `
       ${html}
       <div class="block">
         <div class="enemy-card ${card.title}">
@@ -79,7 +71,7 @@ export default {
           </div>
       </div>
       `;
-    }, ``)}
+  }, "")}
       <div class="block player-block" data-id="1"></div>
       <div class="block player-block" data-id="2"></div>
       <div class="block player-block" data-id="3"></div>

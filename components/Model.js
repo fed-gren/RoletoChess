@@ -110,35 +110,40 @@ export default {
       hp: 100,
       atk: 100,
       def: 100,
-      spd: 1
+      spd: 1,
+      idx: 1
     },
     {
       title: "wolf",
       hp: 100,
       atk: 100,
       def: 100,
-      spd: 1
+      spd: 1,
+      idx: 2
     },
     {
       title: "wolf",
       hp: 100,
       atk: 100,
       def: 100,
-      spd: 1
+      spd: 1,
+      idx: 3
     },
     {
       title: "wolf",
       hp: 100,
       atk: 100,
       def: 100,
-      spd: 1
+      spd: 1,
+      idx: 4
     },
     {
       title: "wolf",
       hp: 100,
       atk: 100,
       def: 100,
-      spd: 1
+      spd: 1,
+      idx: 5
     }
   ],
 
