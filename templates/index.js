@@ -59,14 +59,24 @@ export default {
     }, "");
   },
 
-  battleFieldView({ playerFieldCards, enemyFieldCards }) {
+  battleFieldView({ enemyFieldCards }) {
     const template = `
     <div class="battle-board">
     ${enemyFieldCards.reduce((html, card) => {
       return `
       ${html}
       <div class="block">
-        <div class="enemy-card ${card.title}">${card.title}</div>
+        <div class="enemy-card ${card.title}">
+          <div class="thumb">
+            ${card.title}
+          </div>
+          <div class="desc">
+            <div>ATK : ${card.atk}</div>
+            <div>DEF : ${card.def}</div>
+            <div>SPD : ${card.spd}</div>
+            <div class="hp-bar"></div>
+          </div>
+          </div>
       </div>
       `;
     }, ``)}
@@ -75,6 +85,23 @@ export default {
       <div class="block player-block" data-id="3"></div>
       <div class="block player-block" data-id="4"></div>
       <div class="block player-block" data-id="5"></div>
+    </div>`;
+
+    return template;
+  },
+
+  battleFieldCardView({ cardData }) {
+    const template = `
+    <div class="player-card ${cardData.title}">
+      <div class="thumb">
+        ${cardData.title}
+      </div>
+      <div class="desc">
+        <div>ATK : ${cardData.atk}</div>
+        <div>DEF : ${cardData.def}</div>
+        <div>SPD : ${cardData.spd}</div>
+        <div class="hp-bar"></div>
+      </div>
     </div>`;
 
     return template;

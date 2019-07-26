@@ -34,26 +34,50 @@ export default {
   firstClass: null,
 
   playerChoiceCard: {
-    title: "worrior"
+    title: "worrior",
+    atk: 200,
+    def: 40,
+    spd: 1.2,
+    hp: 150
   },
 
   playerFieldCards: [],
 
   enemyFieldCards: [
     {
-      title: "wolf"
+      title: "wolf",
+      hp: 100,
+      atk: 100,
+      def: 100,
+      spd: 1
     },
     {
-      title: "wolf"
+      title: "wolf",
+      hp: 100,
+      atk: 100,
+      def: 100,
+      spd: 1
     },
     {
-      title: "wolf"
+      title: "wolf",
+      hp: 100,
+      atk: 100,
+      def: 100,
+      spd: 1
     },
     {
-      title: "wolf"
+      title: "wolf",
+      hp: 100,
+      atk: 100,
+      def: 100,
+      spd: 1
     },
     {
-      title: "wolf"
+      title: "wolf",
+      hp: 100,
+      atk: 100,
+      def: 100,
+      spd: 1
     }
   ]
 };

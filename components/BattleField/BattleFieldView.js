@@ -1,5 +1,6 @@
 import template from "../../templates/index.js";
 import Model from "../Model.js";
+import templates from "../../templates/index.js";
 
 export default class BattleFieldView {
   constructor() {
@@ -7,6 +8,7 @@ export default class BattleFieldView {
   }
 
   attachEvent() {
+    this.eventAttachFlag = true;
     this.battleBoard = document.querySelector(".battle-board");
     this.battleBoard.addEventListener(
       "click",
@@ -39,10 +41,7 @@ export default class BattleFieldView {
     //Model에 있는 selectedCard에 있는 데이터 옮기기.
     const card = Model.playerChoiceCard;
     if (card === null) return;
-
-    target.innerHTML = `<div class="player-card ${card.title}">${
-      card.title
-    }</div>`;
+    target.innerHTML = templates.battleFieldCardView({ cardData: card });
   }
 
   removePlayerCard({ target }) {
