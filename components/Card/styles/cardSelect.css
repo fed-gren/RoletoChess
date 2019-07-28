@@ -30,6 +30,7 @@
 .deck-onHand,
 .deck-market {
   width: 80%;
+  height: 134px;
   padding: 15px 0;
   border-radius: 20px;
 }

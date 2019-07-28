@@ -17,12 +17,14 @@ export default class SelectView extends MyEventEmitter {
     this.cardSelect = document.querySelector(".class-select");
 
     this.cardSelect.addEventListener("click", ({ target }) => {
-      if (Model.onHand) return;
+      if (Model.firstClass.length) return;
 
       if (target.classList.contains("class-card")) {
-        Model.onHand = Model.startCards.filter(obj => {
+        [Model.firstClass] = Model.startCards.filter(obj => {
           return obj.title === target.dataset.class;
         });
+        Model.firstClass.idx = 1;
+        Model.onHand = [Model.firstClass];
         this.emit("start");
       }
     });
