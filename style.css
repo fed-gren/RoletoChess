@@ -52,12 +52,21 @@ li {
   width: 50px;
   height: 50px;
   border-radius: 45px;
-  color: #dfdb00;
+  color: white;
   font-weight: 800;
-  background-color: #031474;
+  background-color: #0eafee;
   border: none;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   outline: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.modal__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 238, 238, 0.5);
   cursor: pointer;
 }
 
@@ -67,13 +76,12 @@ li {
   height: 400px;
   left: calc(50% - 350px);
   top: calc(50% - 200px);
-  border-radius: 45px;
-  color: #000;
-  background-color: navy;
-  border: 5px solid #dfdb00;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   outline: none;
   padding: 15px 30px;
+  cursor: auto;
 }
 
 .modal__popup--help {
@@ -84,4 +92,12 @@ li {
 
 .show {
   display: none;
+}
+
+.modal__popup--container > h2 {
+  margin: 1rem 0;
+}
+
+.modal__popup--container > * {
+  text-align: center;
 }

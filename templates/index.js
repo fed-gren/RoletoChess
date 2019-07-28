@@ -40,15 +40,11 @@ export default {
     `;
   },
 
-  contentsList(className, datas) {
-    return datas.reduce((acc, data) => {
-      return (
-        acc
-        + `
-        <li class="${className}">${data}</li>
-      `
-      );
-    }, "");
+  contentsList(_, messages) {
+    return `
+    <h2 class="modal--popup__title">${messages.title}</h2>
+    <p class="modal--popup__contents">${messages.contents}</p>
+    `;
   },
 
   battleFieldView({ enemyFieldCards }) {
