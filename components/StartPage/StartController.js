@@ -1,7 +1,8 @@
 //카드 선택 되면, playView 렌더링
 
+
+// import Model from "../Model.js";
 import Deck from "../Card/InGame/CardDeck/Deck.js";
-import Model from "../Model.js";
 import constant from "../Card/InGame/constants.js";
 import DeckController from "../Card/InGame/CardDeck/DeckController.js";
 
@@ -25,16 +26,14 @@ export default class StartController {
     this.container.style.opacity = 0;
     this.sleep(200).then(() => {
       this.playView.render();
-      this.container.style.opacity = 1;
-    }).then(() => {
-      const onHand = new Deck(Model.onHand, this.container);
-      const market = new Deck(Model.allCards.level1, this.container);
+      const onHand = new Deck(this.container);
+      const market = new Deck(this.container);
 
       onHand.init(constant.onHandContainer);
       market.init(constant.marketContainer);
-      return {onHand, market};
-    }).then( instCollector => {
-      new DeckController(instCollector);
+      new DeckController({onHand, market});
+    }).then(() => {
+      this.container.style.opacity = 1;
     });
   }
 

@@ -7,18 +7,30 @@ export default {
         id: 1,
         title: "worrior",
         class: 1,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 2,
         title: "witch",
         class: 1,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 3,
         title: "archer",
         class: 1,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       }
     ],
     level2: [
@@ -26,18 +38,30 @@ export default {
         id: 4,
         title: "ghost worrior",
         class: 2,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 5,
         title: "sorcerer",
         class: 2,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 6,
         title: "elf",
         class: 2,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       }
     ],
     level3: [
@@ -45,18 +69,30 @@ export default {
         id: 7,
         title: "demon worrior",
         class: 3,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 8,
         title: "wizard",
         class: 3,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       },
 
       {
         id: 9,
         title: "dark elf",
         class: 3,
+        atk: 200,
+        def: 40,
+        spd: 1.2,
+        hp: 150,
       }
     ],
   },
@@ -66,18 +102,30 @@ export default {
       id: 1,
       title: "worrior",
       class: 1,
+      atk: 200,
+      def: 40,
+      spd: 1.2,
+      hp: 150,
     },
 
     {
       id: 2,
       title: "witch",
       class: 1,
+      atk: 200,
+      def: 40,
+      spd: 1.2,
+      hp: 150,
     },
 
     {
       id: 3,
       title: "archer",
       class: 1,
+      atk: 200,
+      def: 40,
+      spd: 1.2,
+      hp: 150,
     }
   ],
 
@@ -147,9 +195,11 @@ export default {
     }
   ],
 
-  fistClass: null,
+  firstClass: [],
 
-  onHand: null,
+  onHand: [],
 
-  market: []
+  market: [],
+
+  // pickedDom: null
 };
