@@ -7,60 +7,126 @@ export default class DeckController {
     this.market = market;
     this.onHandContainer = document.querySelector(`.${constant.onHandContainer}`);
     this.marketContainer = document.querySelector(`.${constant.marketContainer}`);
-    this.isPicked = false;
+    // this.isPicked = false;
+    // this.isSelceted = false;
+    this.init();
+  }
+  
+  init() {
+    this.setCardsOnMarket(5, Model.allCards.level1);
+    // this.changeDataOnCards(Model.market);
+    this.onHand.initRender(Model.onHand, constant.onHandContainer);
+    this.market.initRender(Model.market, constant.marketContainer);
     this.deckEventHandler();
   }
-
+  
   deckEventHandler() {
     this.marketHandler();
     this.onHandHandler();
   }
-
+  
   marketHandler() {
     this.marketContainer.addEventListener("click", (event) => {
-      console.log(event);
       this.buyCards(event.target);
-      console.log(document.querySelector("body"));
     });
   }
-
+  
   onHandHandler() {
     this.onHandContainer.addEventListener("click", ({target}) => {
       this.setChoiceCard(target);
     });
   }
-
+  
   buyCards(target) {
     if(!target.classList.contains("class-card") || this.isPicked) return;
-    const pickedUnit = this.getUnit(target.dataset.class);
-    pickedUnit.idx = Model.onHand.length+1;
-    console.log(pickedUnit);
-    Model.onHand.push(...pickedUnit);
-    const newTemplate = this.onHand.renderCards(Model.onHand);
-    this.onHandContainer.innerHTML = newTemplate;
-    this.removeCard(target);
-    console.log(Model.onHand);
-    this.isPicked = true;
+    this.setDataInOnHand(target);
+    this.removeCardData("market", target);
+    this.renderOnHand();
+    this.renderMarket();
+    // this.isPicked = true;
   }
-
+  
   setChoiceCard(target) {
     if(!target.classList.contains("class-card")) return;
-    const pickedUnit = this.getUnit(target.dataset.class);
-    Model.playerChoiceCard = pickedUnit;
-    // Model.onHand
-    const cards = target.parentElement.querySelectorAll(".class-card");
-    console.log(cards);
+    const pickedUnit = this.getCardData("onHand", target);
+    Model.playerChoiceCard = pickedUnit;    
+    this.removeCardData("onHand", target);
+    this.renderOnHand();
+    // this.isSelected = true;
+  }
+  
+  // onHand로 data push
+  setDataInOnHand(target) {
+    const pickedUnit = this.getCardData("market", target);
+    pickedUnit.idx = Model.onHand.length+1;
+    Model.onHand.push(pickedUnit);
+  }
+  
+  // onHand 부분 re-rendering
+  renderOnHand() {
+    const newTemplate = this.onHand.renderCards(Model.onHand);
+    this.onHandContainer.innerHTML = newTemplate;
   }
 
-  getUnit(unitClass) {
-    return Model.allCards.level1.filter( unit => unit.title === unitClass );
+  // market 부분 re-rendering
+  renderMarket() {
+    const newTemplate = this.market.renderCards(Model.market);
+    this.marketContainer.innerHTML = newTemplate;
   }
 
-  removeCard(card) {
-    card.outerHTML = "";
+  // 해당 index의 카드 데이터 가져오기
+  getCardData(dataCol, {dataset}) {
+    const idx = dataset.idx * 1 - 1;
+    return Model[dataCol][idx];
+  }
+  
+  // Model data collection 중 해당 idx의 data 삭제
+  removeCardData(dataCol, {dataset}) {
+    const idx = dataset.idx * 1 - 1;
+    Model[dataCol].splice(idx, 1);
+  }
+  
+  // random cards 가져오기
+  setCardsOnMarket(numOfCards, cardsArr) {
+    const cards = [...cardsArr],
+      cardsLen = cards.length,
+      marketCards = [];
+    
+    let randomNum;
+    
+    for (let i = 0; i < numOfCards; i++) {
+      randomNum = Math.floor(Math.random() * cardsLen);
+      
+      const randomCard = cards[randomNum];
+      marketCards.push(randomCard);
+    }
+    Model.market = marketCards;
   }
 
-  onHandIdxReorder() {
-    Model.onHand.forEach((cur, idx) => cur.idx = idx + 1);
-  }
+  // onHand
+  // changeDataOnCards(cardModel) {
+  //   cardModel.forEach((cur, index) => cur.idx = index + 1);
+  //   debugger;
+  // }
+  
+  // Market
+  // setCardsOnMarket(numOfCards, ...cardCols) {
+  //   const cards = Array.from(cardCols).flat(),
+  //     cardsLen = cards.length,
+  //     marketCards = [];
+  //   let randomIdx,
+  //     limit = 0;
+    
+  //   while(limit < numOfCards) {
+  //     randomIdx = Math.floor(Math.random() * cardsLen);
+  //     limit += 1;
+      
+  //     const randomCard = cards[randomIdx];
+  //     randomCard.idx = limit + 1;
+  //     marketCards.push(randomCard);
+      
+  //   }
+  //   Model.market = marketCards;
+  //   this.changeDataOnCards(Model.market);
+  // }
 }

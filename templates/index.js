@@ -10,10 +10,10 @@ export default {
   cardSelectView(data) {
     return `
       <ul>
-        ${data.reduce((html, item) => {
+        ${data.reduce((html, item, idx) => {
     return `
           ${html}
-          <li class="class-card ${item.title}" data-class=${item.title} data-idx=${item.idx}>
+          <li class="class-card ${item.title}" data-class=${item.title} data-idx=${idx+1}>
             ${item.title}
           </li>
           `;
